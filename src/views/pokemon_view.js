@@ -82,14 +82,17 @@ PokemonView.prototype.render = function (pokemon) {
   const abilities = document.createElement('li');
   abilities.textContent = ` Abilities: ${pokemon.abilities[0].ability.name} and ${pokemon.abilities[1].ability.name}`;
   list.appendChild(abilities);
+  const moves = document.createElement('li');
+  moves.textContent = ` Moves: ${pokemon.moves[0].move.name}, ${pokemon.moves[1].move.name}, ${pokemon.moves[2].move.name}`;
+  list.appendChild(moves);
   const type = document.createElement('li');
   type.textContent = ` Type: ${pokemon.types[0].type.name}`;
   list.appendChild(type);
 
   const picture = document.createElement('img');
   picture.setAttribute('src', `${pokemon.sprites.front_default}`);
-  picture.setAttribute("height", "400");
-  picture.setAttribute("width", "400");
+  picture.setAttribute("height", "300");
+  picture.setAttribute("width", "200");
   picture.setAttribute("alt", "suppp");
   picture.setAttribute("id", "image");
   div.appendChild(picture);
